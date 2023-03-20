@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="isSelected"
+            type="Boolean"
+            tools:value="true"/>
+
+        <variable
+            name="isSelectedByAnother"
+            type="Boolean"
+            tools:value="true"/>
+        <variable
+            name="name"
+            type="String"
+            />
+    </data>
+
+    <!--
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@{isSelected ? @color/purple_200 : @color/white}"
+        android:padding="12dp">
+        <TextView
+            android:id="@+id/gfName"
+            android:text="@{name}"
+            android:enabled="@{!isSelectedByAnother}"
+            tools:text="12312312312312"
+            tools:enabled="false"
+            android:maxLines="1"
+            android:ellipsize="start"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

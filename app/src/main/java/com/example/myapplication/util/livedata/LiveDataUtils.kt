@@ -16,5 +16,6 @@ object LiveDataUtils {
             result.value = block(this.value, liveData.value)
         }
         return result
+
     }
 }

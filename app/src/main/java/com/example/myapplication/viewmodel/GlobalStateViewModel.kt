@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 
 class GlobalStateViewModel : ViewModel() {
 
-    val gfList: LiveData<List<GFModel>> = GfRepository.gfList
+    val gfList = MutableLiveData(GfRepository.gfList)
 
     val slots = MutableLiveData(
         MutableList(
